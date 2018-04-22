@@ -41,12 +41,12 @@ bot.on("message", async message => {
       message.delete();
     }
   } else {
-    if(first === `!help`) {
+    if(first === `!hb_help`) {
       message.delete();
-      message.author.send(`Hello, ${message.author.name}.\n\n:link: **Forums:** ${botconfig.forums}\n:moneybag: **Store:** ${botconfig.store}\n:video_game: **IP:** ${botconfig.ip}`);
+      message.author.send(`Hello, ${message.author.username}.\n\n:link: **Forums:** ${botconfig.forums}\n:moneybag: **Store:** ${botconfig.store}\n:video_game: **IP:** ${botconfig.ip}`);
       let embedMsg = new Discord.RichEmbed()
       .setColor("#4bba30")
-      .setDescription(":yes: A private message has been sent.");
+      .setDescription("✅ A private message has been sent.");
 
       message.channel.send(embedMsg);
     }
