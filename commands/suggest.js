@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
   // Command: !suggest (suggestion).
   message.delete();
 
-  if(message.channel.id !== "437640867512320010") {
+  if(message.channel.id !== "427017304329551872") {
     let embedMsg = new Discord.RichEmbed()
     .setColor("#b21717")
     .addField("» Error", "Please send suggestions at #suggestions.");
