@@ -18,7 +18,15 @@ module.exports.run = async (bot, message, args) => {
       .addField("Author:", `${message.author.tag}`)
       .addField("Date:", `${message.createdAt.toDateString()}`);
 
-      message.channel.send(embedMsg);
+      message.channel.send(embedMsg).then(function (message) {
+       const agree = message.guild.emojis.find("name", "yes");
+       const disagree = message.guild.emojis.find("name", "no");
+       message.react(agree.id)
+       message.react(disagree.id)
+      }).catch(e => {
+        console.log(e);
+      });;
+      
     } else {
       let embedMsg = new Discord.RichEmbed()
       .setColor("#b21717")
