@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
     if(args[0]) {
       let embedMsg = new Discord.RichEmbed()
       .setColor("#FFFF55")
-      .addField("Suggestion:", args)
+      .addField("Suggestion:", `${message.content.slice(9)}`)
       .addField("Author:", `${message.author.tag}`)
       .addField("Date:", `${message.createdAt.toDateString()}`);
 
