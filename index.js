@@ -23,11 +23,6 @@ fs.readdir("./commands/", (err, files) => {
 
 });
 
-bot.on("ready", async () => {
-  console.log("HavocBOT is now online!")
-  bot.user.setActivity(`${botconfig.activity}`);
-});
-
 bot.on("message", async message => {
   if(message.channel.type === "dm") return;
   if(message.author.bot) return;
@@ -44,6 +39,14 @@ bot.on("message", async message => {
   if(message.channel.id === `427017304329551872`) {
     if(first !== `!suggest`) {
       message.delete();
+    }
+  } else {
+    if(first === `!help`) {
+      message.delete();
+      message.author.send(`Hello, ${message.author.name}.\n\n:link: **Forums:** ${botconfig.forums}\n:moneybag: **Store:** ${botconfig.store}\n:video_game: **IP:** ${botconfig.ip}`);
+      let embedMsg = new Discord.RichEmbed
+      .setColor("#4bba30")
+      .setDescription(":yes: A private message has been sent.");
     }
   }
 });
