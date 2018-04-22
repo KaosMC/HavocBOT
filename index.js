@@ -44,7 +44,7 @@ bot.on("message", async message => {
     if(first === `!help`) {
       message.delete();
       message.author.send(`Hello, ${message.author.name}.\n\n:link: **Forums:** ${botconfig.forums}\n:moneybag: **Store:** ${botconfig.store}\n:video_game: **IP:** ${botconfig.ip}`);
-      let embedMsg = new Discord.RichEmbed
+      let embedMsg = new Discord.RichEmbed()
       .setColor("#4bba30")
       .setDescription(":yes: A private message has been sent.");
 
