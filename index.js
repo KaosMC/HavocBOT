@@ -40,6 +40,12 @@ bot.on("message", async message => {
     let commandfile = bot.commands.get(`suggest`);
     if(commandfile) commandfile.run(bot, message, args);
   }
+
+  if(message.channel.id === `427017304329551872`) {
+    if(first !== `!suggest`) {
+      message.delete();
+    }
+  }
 });
 
 bot.on("guildMemberAdd", (member) => {
