@@ -47,6 +47,8 @@ bot.on("message", async message => {
       let embedMsg = new Discord.RichEmbed
       .setColor("#4bba30")
       .setDescription(":yes: A private message has been sent.");
+
+      message.channel.send(embedMsg);
     }
   }
 });
