@@ -54,7 +54,7 @@ bot.on("message", async message => {
 });
 
 bot.on("guildMemberAdd", (member) => {
-  let memberRole = member.guild.roles.find("name", "[Member]");
+  let memberRole = member.guild.roles.find("name", "Member");
   member.addRole(memberRole).catch(console.error);
 });
 
