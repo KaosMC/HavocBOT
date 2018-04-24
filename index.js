@@ -48,7 +48,9 @@ bot.on("message", async message => {
       .setColor("#4bba30")
       .setDescription("✅ A private message has been sent.");
 
-      message.channel.send(embedMsg);
+      message.channel.send(embedMsg).then(embedMsg => {
+        embedMsg.bulkDelete(15000);
+      });
     }
   }
 });
