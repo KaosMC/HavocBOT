@@ -9,7 +9,9 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#b21717")
     .addField("» Error", "Please send suggestions at #suggestions.");
 
-    message.channel.send(embedMsg);
+    message.channel.send(embedMsg).then(embedMsg => {
+        embedMsg.delete(15000);
+      });
   } else {
     if(args[0]) {
       let embedMsg = new Discord.RichEmbed()
@@ -32,7 +34,9 @@ module.exports.run = async (bot, message, args) => {
       .setColor("#b21717")
       .addField("» Error", "Insufficient arguments!");
 
-      message.channel.send(embedMsg);
+      message.channel.send(embedMsg).then(embedMsg => {
+        embedMsg.delete(15000);
+      });
     }
   }
 }
