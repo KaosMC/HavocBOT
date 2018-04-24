@@ -49,7 +49,7 @@ bot.on("message", async message => {
       .setDescription("✅ A private message has been sent.");
 
       message.channel.send(embedMsg).then(embedMsg => {
-        embedMsg.bulkDelete(15000);
+        embedMsg.delete(15000);
       });
     }
   }
