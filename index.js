@@ -80,7 +80,7 @@ bot.on("message", async message => {
      message.delete();
      let embedMsg = new Discord.RichEmbed()
       .setColor("#FFFF55")
-      .setDescription("🔗 **Website:** Coming Soon!");
+      .setDescription("🔗 **Website:** havocraids.net");
 
      message.channel.send(embedMsg).then(embedMsg => {
       embedMsg.delete(15000);
