@@ -80,7 +80,7 @@ bot.on("message", async message => {
      message.delete();
      let embedMsg = new Discord.RichEmbed()
       .setColor("#FFFF55")
-      .setDescription("🔗 **Forums:** havocraids.net");
+      .setDescription("🔗 **Forums:** https://havocraids.net");
 
      message.channel.send(embedMsg).then(embedMsg => {
       embedMsg.delete(15000);
@@ -89,7 +89,7 @@ bot.on("message", async message => {
      message.delete();
      let embedMsg = new Discord.RichEmbed()
       .setColor("#FFFF55")
-      .setDescription("🔗 **Website:** havocraids.net");
+      .setDescription("🔗 **Website:** https://havocraids.net");
 
      message.channel.send(embedMsg).then(embedMsg => {
       embedMsg.delete(15000);
