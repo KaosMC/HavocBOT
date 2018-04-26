@@ -86,7 +86,8 @@ bot.on("message", async message => {
       embedMsg.delete(15000);
      });
     }
-   });
+   }
+ });
 
   bot.on("guildMemberAdd", (member) => {
    let memberRole = member.guild.roles.find("name", "Member");
