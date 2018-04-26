@@ -94,7 +94,7 @@ bot.on("message", async message => {
      message.channel.send(embedMsg).then(embedMsg => {
       embedMsg.delete(15000);
      });
-    } else if (first === `!invites`) {
+    } /*else if (first === `!invites`) {
      message.delete();
      let embedMsg = new Discord.RichEmbed()
       .setColor("#FFFF55")
@@ -103,20 +103,20 @@ bot.on("message", async message => {
      message.channel.send(embedMsg).then(embedMsg => {
       embedMsg.delete(15000);
      });
-    }
+    }*/
    }
  });
 
   bot.on("guildMemberAdd", (member) => {
    let memberRole = member.guild.roles.find("name", "Member");
    member.addRole(memberRole).catch(console.error);
-   let embedMsg = new Discord.RichEmbed()
+   /*let embedMsg = new Discord.RichEmbed()
    .setColor("#FFFF55")
    .addField(`${member.name} has joined.`, `Invited by ${member.inviter.name}.`);
    
    member.guild.channels.find("name", "welcome").send(embedMsg).then(embedMsg => {
       embedMsg.delete(15000);
-     });
+     });*/
   });
 
   bot.login(process.env.BOT_TOKEN);
