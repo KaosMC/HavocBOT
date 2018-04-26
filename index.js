@@ -94,4 +94,4 @@ bot.on("message", async message => {
    member.addRole(memberRole).catch(console.error);
   });
 
-  bot.login(botconfig.token);
+  bot.login(process.ENV.BOT_TOKEN);
