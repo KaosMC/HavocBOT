@@ -94,6 +94,15 @@ bot.on("message", async message => {
      message.channel.send(embedMsg).then(embedMsg => {
       embedMsg.delete(15000);
      });
+    } else if (first === `!invites`) {
+     message.delete();
+     let embedMsg = new Discord.RichEmbed()
+      .setColor("#FFFF55")
+      .setDescription(`You have invited ${message.author.invite.uses} members.`);
+
+     message.channel.send(embedMsg).then(embedMsg => {
+      embedMsg.delete(15000);
+     });
     }
    }
  });
@@ -101,6 +110,13 @@ bot.on("message", async message => {
   bot.on("guildMemberAdd", (member) => {
    let memberRole = member.guild.roles.find("name", "Member");
    member.addRole(memberRole).catch(console.error);
+   let embedMsg = new Discord.RichEmbed()
+   .setColor("#FFFF55")
+   .addField(`${member.username} has joined.`, `Invited by ${member.inviter.username}.`)
+   
+   member.guild.channels.find("name", "welcome").send(embedMsg).then(embedMsg => {
+      embedMsg.delete(15000);
+     });
   });
 
   bot.login(process.env.BOT_TOKEN);
