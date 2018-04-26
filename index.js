@@ -76,6 +76,15 @@ bot.on("message", async message => {
      message.channel.send(embedMsg).then(embedMsg => {
       embedMsg.delete(15000);
      });
+    } else if (first === `!forums`) {
+     message.delete();
+     let embedMsg = new Discord.RichEmbed()
+      .setColor("#FFFF55")
+      .setDescription("🔗 **Forums:** havocraids.net");
+
+     message.channel.send(embedMsg).then(embedMsg => {
+      embedMsg.delete(15000);
+     });
     } else if (first === `!website`) {
      message.delete();
      let embedMsg = new Discord.RichEmbed()
