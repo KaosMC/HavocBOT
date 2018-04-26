@@ -62,7 +62,7 @@ bot.on("message", async message => {
      message.delete();
      let embedMsg = new Discord.RichEmbed()
       .setColor("#FFFF55")
-      .setDescription("🎮 **IP:** play.havocraids.net");
+      .setDescription(`🎮 **IP:** ${botconfig.ip}`);
 
      message.channel.send(embedMsg).then(embedMsg => {
       embedMsg.delete(15000);
@@ -71,7 +71,7 @@ bot.on("message", async message => {
      message.delete();
      let embedMsg = new Discord.RichEmbed()
       .setColor("#FFFF55")
-      .setDescription("💰 **Store:** Coming Soon!");
+      .setDescription(`💰 **Store:** ${botconfig.store}`);
 
      message.channel.send(embedMsg).then(embedMsg => {
       embedMsg.delete(15000);
@@ -80,7 +80,7 @@ bot.on("message", async message => {
      message.delete();
      let embedMsg = new Discord.RichEmbed()
       .setColor("#FFFF55")
-      .setDescription("🔗 **Forums:** https://havocraids.net");
+      .setDescription(`🔗 **Forums:** ${botconfig.forums}`);
 
      message.channel.send(embedMsg).then(embedMsg => {
       embedMsg.delete(15000);
@@ -89,7 +89,7 @@ bot.on("message", async message => {
      message.delete();
      let embedMsg = new Discord.RichEmbed()
       .setColor("#FFFF55")
-      .setDescription("🔗 **Website:** https://havocraids.net");
+      .setDescription(`🔗 **Website:** ${botconfig.forums}`);
 
      message.channel.send(embedMsg).then(embedMsg => {
       embedMsg.delete(15000);
