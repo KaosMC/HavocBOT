@@ -112,7 +112,7 @@ bot.on("message", async message => {
    member.addRole(memberRole).catch(console.error);
    let embedMsg = new Discord.RichEmbed()
    .setColor("#FFFF55")
-   .addField(`${member.name} has joined.`, `Invited by ${member.inviter.name}.`)
+   .addField(`${member.name} has joined.`, `Invited by ${member.inviter.name}.`);
    
    member.guild.channels.find("name", "welcome").send(embedMsg).then(embedMsg => {
       embedMsg.delete(15000);
