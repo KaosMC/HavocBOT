@@ -61,7 +61,7 @@ bot.on("message", async message => {
     } else if (first === `!ip`) {
      message.delete();
      let embedMsg = new Discord.RichEmbed()
-      .setColor("#4bba30")
+      .setColor("#FFFF55")
       .setDescription("🎮 **IP:** play.havocraids.net");
 
      message.channel.send(embedMsg).then(embedMsg => {
@@ -70,7 +70,7 @@ bot.on("message", async message => {
     } else if (first === `!store`) {
      message.delete();
      let embedMsg = new Discord.RichEmbed()
-      .setColor("#4bba30")
+      .setColor("#FFFF55")
       .setDescription("💰 **Store:** Coming Soon!");
 
      message.channel.send(embedMsg).then(embedMsg => {
@@ -79,7 +79,7 @@ bot.on("message", async message => {
     } else if (first === `!website`) {
      message.delete();
      let embedMsg = new Discord.RichEmbed()
-      .setColor("#4bba30")
+      .setColor("#FFFF55")
       .setDescription("🔗 **Website:** Coming Soon!");
 
      message.channel.send(embedMsg).then(embedMsg => {
